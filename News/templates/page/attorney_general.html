@@ -1,0 +1,75 @@
+{% extends 'control/base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+<body>
+  <br class="clear" />
+  <div class="wrapper col4">
+  <div id="container">
+    <div class="gallery">
+      <h2>{% trans 'ALL Attorneys General' %}</h2>
+
+      <ul class="news-list">
+        {% for attorney_general in attorney_general %}
+          <li class="news-item">
+            <a href="{% url  'attorney_general_view' attorney_general.id %}">
+              <img src="{{ attorney_general.main_image.url }}" alt="" width="174" height="174" />
+               <br class="clear" />
+              <time datetime="{{ attorney_general.start_date }}">
+              {{ attorney_general.start_date|date:"Y-m-d" }}
+              </time>
+              <br class="clear" />
+              <h3>
+                {% get_current_language as LANGUAGE_CODE %}
+              {% if LANGUAGE_CODE == 'ar' %}
+                  {{ attorney_general.name_arb }}
+              {% else %}
+                  {{ attorney_general.name_eng }}
+              {% endif %}
+              </h3>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <br class="clear" />
+    </div>
+  </div>
+</div>
+
+      <!--########################################################################################################-->
+
+
+      <div class="d-flex justify-content-center bd-highlight mb-3">
+        {% if page_obj.paginator.count > 0 %}
+        <nav>
+          <ul class="pagination">
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                {% trans 'previous' %}
+              </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="#">{% trans 'previous' %}</a>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                {% trans 'Next' %}
+              </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="#">{% trans 'Next' %}</a>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+      {% endif %}
+
+</body>
+
+{% endblock %}

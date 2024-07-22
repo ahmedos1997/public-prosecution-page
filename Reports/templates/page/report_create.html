@@ -1,0 +1,158 @@
+    {% extends 'control/base.html' %}
+    {% load i18n %}
+    {% block content %}
+
+    <div class="code-container">
+    <br class="clear" />
+    <h1 style="color: green;"> {% trans 'Create Report' %} </h1>
+
+    <div style="color: firebrick;" class="warning">
+
+    <h1> {% trans 'Warning' %} </h1>
+
+    <h3>{% trans 'The Data Entered is the Responsibility of the User in the Event that he Enters any False Information that Exposes Himself to a Legal Issue' %}</h3>
+    </div>
+
+    <form method="post" id="report_create_form" data-prosecutions-url="{% url 'ajax_load_prosecution' %}" novalidate>
+    <div class="col-12">
+    <div class="card">
+    <div class="card-body">
+    <form id="form-user-info" >
+    {% csrf_token %}
+    <div class="row">
+    <div class="col-md-6">
+    <div class="mb-3">
+    <strong>
+    <table>
+    <td>
+    <h3>
+    {% csrf_token %}
+
+    <table>
+
+    <tr>
+    <td><label for="id_complainant_name" style="font-size: 18px;">{% trans 'Complainant Name' %} :</label></td>
+    <td >{{ form.complainant_name }} </td>
+    <td>  {% if form.complainant_name.errors %}{{ form.complainant_name.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_complainant_address" style="font-size: 18px;">{% trans 'Complainant Address' %} :</label></td>
+    <td>{{ form.complainant_address }}</td>
+    <td>{% if form.complainant_address.errors %}{{ form.complainant_address.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_complainant_nationality" style="font-size: 18px;">{% trans 'Complainant Nationality' %} :</label></td>
+    <td>{{ form.complainant_nationality }}</td>
+    <td>{% if form.complainant_nationality.errors %}{{ form.complainant_nationality.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_complainant_national_number" style="font-size: 18px;">{% trans 'Complainant National Number' %} :</label></td>
+    <td>{{ form.complainant_national_number }}</td>
+    <td>{% if form.complainant_national_number.errors %}{{ form.complainant_national_number.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_complainant_passport_type" style="font-size: 18px;">{% trans 'Complainant Passport Type' %} :</label></td>
+    <td>{{ form.complainant_passport_type }}</td>
+    <td>{% if form.complainant_passport_type.errors %}{{ form.complainant_passport_type.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_complainant_passport_number" style="font-size: 18px;">{% trans 'Complainant Passport Number' %} :</label></td>
+    <td>{{ form.complainant_passport_number }}</td>
+    <td>{% if form.complainant_passport_type.errors %}{{ form.complainant_passport_type.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_complainant_email" style="font-size: 18px;">{% trans 'Complainant Email' %} :</label></td>
+    <td>{{ form.complainant_email }}</td>
+    <td>{% if form.complainant_email.errors %}{{ form.complainant_email.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_complainant_phone" style="font-size: 18px;">{% trans 'Complainant Phone' %} :</label></td>
+    <td>{{ form.complainant_phone }}</td>
+    <td>{% if form.complainant_phone.errors %}{{ form.complainant_phone.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_accused_name" style="font-size: 18px;">{% trans 'Accused Name' %} :</label></td>
+    <td>{{ form.accused_name }}</td>
+    <td>{% if form.accused_name.errors %}{{ form.accused_name.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_report_number" style="font-size: 18px;">{% trans 'Report Number' %} :</label></td>
+    <td>{{ form.report_number }}</td>
+    <td>{% if form.report_number.errors %}{{ form.report_number.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_state" style="font-size: 18px;">{% trans 'State' %} :</label></td>
+    <td>{{ form.state }}</td>
+    <td>{% if form.state.errors %}{{ form.state.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_prosecution" style="font-size: 18px;">{% trans 'Prosecution' %} :</label></td>
+    <td>{{ form.prosecution }}</td>
+    <td>{% if form.prosecution.errors %}{{ form.prosecution.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_police" style="font-size: 18px;">{% trans 'Police' %} :</label></td>
+    <td>{{ form.police }}</td>
+    <td>{% if form.police.errors %}{{ form.police.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_date_report" style="font-size: 18px;">{% trans 'Date Report' %} :</label></td>
+    <td>{{ form.date_report }}</td>
+    <td>{% if form.date_report.errors %}{{ form.date_report.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_materials_of_accusation" style="font-size: 18px;">{% trans 'Materials of Accusation' %}</label></td>
+    <td>{{ form.materials_of_accusation }}</td>
+    <td>{% if form.materials_of_accusation.errors %}{{ form.materials_of_accusation.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_summary_report" style="font-size: 18px;">{% trans 'Summary Report' %}</label></td>
+    <td>{{ form.summary_report }}</td>
+    <td>{% if form.summary_report.errors %}{{ form.summary_report.errors }}{% endif %}
+    </tr>
+    <tr>
+    <td><label for="id_note" style="font-size: 18px;">{% trans 'Note' %}</label></td>
+    <td>{{ form.note }}</td>
+    <td>{% if form.note.errors %}{{ form.note.errors }}{% endif %}
+    </tr>
+    </table>
+
+    <button style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 12px; box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.15); transition: all 0.3s ease 0s;">
+    {% trans 'Save' %}
+    </button>
+    </h3>
+    </td>
+    </table>
+    </strong>
+    </div>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </form>
+    </div>
+
+
+
+    <!-- هذا الكود مرتبط بعملية فلترة النيابات بناءا على الولاية المختارةة من قبل المستخدم  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    $("#id_state").change(function () {
+    var url = $("#report_create_form").attr("data-prosecutions-url");
+    var stateId = $(this).val();
+
+    $.ajax({
+    url: url,
+    data: {
+    'state': stateId
+    },
+    success: function (data) {
+    $("#id_prosecution").html(data);
+    }
+    });
+    });
+
+    </script>
+    {% endblock %}

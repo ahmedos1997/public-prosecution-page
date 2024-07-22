@@ -1,0 +1,43 @@
+{% load static %}
+{% load i18n %}
+
+
+
+
+
+
+
+<html lang="ar" class="h-100" dir="rtl">
+<head>
+    <title>{% trans 'Public Prosecution' %}</title>
+
+
+
+    <link href="{% static 'css/forms.css' %}" rel="stylesheet">
+    <link href="{% static 'css/layout.css' %}" rel="stylesheet">
+    <link href="{% static 'css/navi.css' %}" rel="stylesheet">
+    <link rel="{% static  'css/tables.css' %}"  rel="stylesheet">
+
+
+
+<!--    <script src="https://js.stripe.com/v3/"></script>-->
+
+    </head>
+<body class="d-flex flex-column h-10 bg-light">
+    {% include 'control/header.html' %}
+    <main class="flex-shrink-0">
+        <div class="container mt-5">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    {% include 'control/footer.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+</body>
+</html>

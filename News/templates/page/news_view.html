@@ -1,0 +1,74 @@
+{% extends 'control/base.html' %}
+{% load i18n %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<br class="clear" /><br class="clear" /><br class="clear" />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <h1 style="color: green;">
+                {% get_current_language as LANGUAGE_CODE %}
+                  {% if LANGUAGE_CODE == 'ar' %}
+                      {{ news.title_arb }}
+                  {% else %}
+                      {{ news.title_eng }}
+                  {% endif %}
+                </h1>
+
+
+
+                <h2>
+                     <time datetime="{{ news.date }}">
+              {{ news.date|date:"Y-m-d" }}
+              </time>
+                </h2>
+                <img src="{{ news.main_image.url }}" width="400" height="300" alt="{{ image.alt }}">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                 <strong>
+                      <p style=" font-size: 25px;">
+                            {% get_current_language as LANGUAGE_CODE %}
+                          {% if LANGUAGE_CODE == 'ar' %}
+                              {{ news.article_arb }}
+                          {% else %}
+                              {{ news.article_eng }}
+                          {% endif %}
+                      </p>
+                 </strong>
+            </div>
+        </div>
+    </div>
+      <br class="clear" />
+      <br class="clear" />
+
+    <h2 style="color: green;">{% trans 'News images' %}</h2>
+
+    <div class="container">
+        <div class="row">
+            {% for image in news.attached_image.all %}
+                <div class="col-md-3">
+                    <img src="{{ image.image.url }}" width="400" height="300" alt="">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container">
+    <div class="row">
+        {% for video in news.attached_video.all %}
+            <div class="col-md-3">
+                <video width="400" height="300" controls>
+                    <source src="{{ video.video.url }}" type="video/mp4">
+                   {% trans ' Your browser does not support the video tag.' %}
+                </video>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+</html>
+
+{% endblock %}

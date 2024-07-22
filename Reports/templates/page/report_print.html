@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html dir="rtl" xmlns="http://www.w3.org/1999/html">
+
+  <title>{% trans 'Public Prosecution' %}</title>
+  <img src="{% static 'images/prosecution.png' %}" alt="صورة" style="float: left; margin-left: 0px; width: 50px;" />
+    <img src="{% static 'images/saqr.png' %}" alt="صورة" style="float: right; margin-right: 0px; width: 30px;" />
+  <style>
+    /* أنماط أساسية */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 5px;
+    }
+
+    /* أنماط خاصة بكل قسم */
+
+    .section-title {
+      text-align: center;
+    }
+
+    .info-table {
+      margin-bottom: 20px;
+    }
+
+    .info-table th {
+      text-align: right;
+    }
+
+    .notes {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+  </style>
+   <h1 class="section-title">{% trans 'Republic of Sudan' %}</h1>
+       <h1 class="section-title">{% trans 'Public Prosecution' %}</h1>
+
+<body>
+  <div class="report-container">
+
+     <h1 class="section-title">{{ report.state }}</h1>
+    <h1 class="section-title">{{ report.prosecution }}</h1>
+    <h2>{% trans 'Complainant Information' %}</h2>
+    <table class="info-table">
+       <tr>
+        <th>{% trans 'Follow-up Number' %}</th>
+        <td>{{ report.follow_number }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Complainant Name' %}</th>
+        <td>{{ report.complainant_name }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Complainant Address' %}</th>
+        <td>{{ report.complainant_address }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Complainant Nationality' %}</th>
+        <td>{{ report.complainant_nationality }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Complainant National Number' %}</th>
+        <td>{{ report.complainant_national_number }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Complainant Passport Type' %}</th>
+        <td>{{ report.complainant_passport_type }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Complainant Passport Number' %}</th>
+        <td>{{ report.complainant_passport_number }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Complainant Email' %}</th>
+        <td>{{ report.complainant_email }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Complainant Phone' %}</th>
+        <td>{{ report.complainant_phone }}</td>
+      </tr>
+    </table>
+
+    <h2>{% trans 'Accused Information' %}</h2>
+    <table class="info-table">
+      <tr>
+        <th>{% trans 'Accused Name' %}</th>
+        <td>{{ report.accused_name }}</td>
+      </tr>
+    </table>
+
+    <h2>{% trans 'Report Details' %}</h2>
+
+    <table class="info-table">
+      <tr>
+        <th>{% trans 'Report Number' %}</th>
+        <td>{{ report.report_number }}</td>
+      </tr>
+      <tr>
+          <th>{% trans 'State' %}</th>
+          <td>{{ report.state }}</td>
+      </tr>
+      <tr>
+          <th>{% trans 'Prosecution' %}</th>
+          <td>{{ report.prosecution }}</td>
+      </tr>
+      <tr>
+          <th>{% trans 'Police' %}</th>
+          <td>{{ report.police }}</td>
+      </tr>
+      <tr>
+          <th>{% trans 'Report Date' %}</th>
+          <td>{{ report.date_report }}</td>
+      </tr>
+    </table>
+    </div>
+
+    <div class="notes">
+      <h3>{% trans 'Summary Report' %}</h3>
+      <p>{{ report.summary_report }}</p>
+
+      <h3>{% trans 'Note' %}</h3>
+      <p>{{ report.note }}</p>
+    </div>
+  </div>
+
+  <button onclick="printData()">{% trans 'Print' %}</button>
+
+  <script>
+    function printData() {
+      var printContent = document.body.innerHTML;
+      var originalContent = document.body.innerHTML;
+
+      document.body.innerHTML = printContent;
+
+      window.print();
+
+      document.body.innerHTML = originalContent;
+    }
+  </script>
+</body>
+</html>

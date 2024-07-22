@@ -1,0 +1,7 @@
+
+
+
+<!-- كود لاظهار النيابات فقط التابعة للوالية-->
+{% for prosecution in prosecutions %}
+  <option value="{{ prosecution.pk }}">{{ prosecution.name_arb }}</option>
+{% endfor %}

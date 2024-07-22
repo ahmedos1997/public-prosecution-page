@@ -1,0 +1,86 @@
+{% extends 'control/base.html' %}
+{% load i18n %}
+{% block content %}
+  <style>
+    /* أنماط أساسية */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 5px;
+    }
+
+    /* أنماط خاصة بكل قسم */
+
+    .section-title {
+      text-align: center;
+    }
+
+    .info-table {
+      margin-bottom: 20px;
+    }
+
+    .info-table th {
+      text-align: right;
+    }
+
+    .notes {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+  </style>
+
+<div class="report-container">
+        <br class="clear" />
+
+    <h2>{% trans 'Contact Information' %}</h2>
+    <table class="info-table">
+        <tr>
+        <th>{% trans 'Follow-up Number' %}</th>
+        <td>{{ contact_us.follow_number }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Name' %}</th>
+        <td>{{ contact_us.name }}</td>
+      </tr>
+        <tr>
+        <th>{% trans 'Email' %}</th>
+        <td>{{ contact_us.email }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Phone' %}</th>
+        <td>{{ contact_us.phone }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Date' %}</th>
+        <td>{{ contact_us.date }}</td>
+      </tr>
+      <tr>
+        <th>{% trans 'Comment' %}</th>
+        <td>{{ contact_us.comment }}</td>
+      </tr>
+      <tr>
+    </table>
+  </div>
+
+{% endblock %}

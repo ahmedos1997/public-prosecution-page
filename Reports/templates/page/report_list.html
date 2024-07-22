@@ -1,0 +1,96 @@
+{% extends 'control/base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+<html dir="rtl">
+
+
+<body>
+    <br class="clear" />
+
+    <h1 style="color: green;">{% trans  'Reports' %}</h1>
+
+
+   <table summary="Summary Here" cellpadding="0" cellspacing="0">
+  <caption>{% trans 'Reports = ' %}{{ total_report }}</caption>
+
+
+    <form action="{% url 'get_queryset' %}" method="get">
+        {% csrf_token %}
+        <input type="text" name="q" placeholder="{% trans 'Search report' %}" value="{{ request.GET.q }}">
+        <button type="submit" >Search</button>
+    </form>
+
+
+
+  <thead>
+    <tr>
+      <th>{% trans 'Follow-up Number' %}</th>
+      <th>{% trans 'Complainant Name' %}</th>
+      <th>{% trans 'Accused Name' %}</th>
+      <th>{% trans 'State' %}</th>
+      <th>{% trans 'Prosecution' %}</th>
+      <th>{% trans 'Report Date' %}</th>
+      <th>{% trans 'View' %}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for report in reports %}
+      <tr class="light">
+        <td>{{ report.follow_number }}</td>
+        <td>{{ report.complainant_name }}</td>
+        <td>{{ report.accused_name }}</td>
+        <td>{{ report.state }}</td>
+        <td>{{ report.prosecution }}</td>
+        <td>{{ report.date_report }}</td>
+        <td><a href="{% url  'report_view' report.id %}" class="btn btn-primary">{% trans 'View Report' %}</a></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+{% if page_obj.paginator.count > 0 %}
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+        <nav>
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                            {% trans 'previous' %}
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">{% trans 'previous' %}</a>
+                    </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                            {% trans 'Next' %}
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">{% trans 'Next' %}</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
+<style>
+    td {
+  border: 1px solid #ddd; /* adjust color as needed */
+}
+</style>
+
+{% endif %}
+{% endblock %}
+

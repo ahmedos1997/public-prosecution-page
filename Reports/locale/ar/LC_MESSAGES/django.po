@@ -1,0 +1,385 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-10 18:37+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\Reports\forms.py:24 .\Reports\templates\page\report_create.html:34
+#: .\Reports\templates\page\report_list.html:31
+#: .\Reports\templates\page\report_print.html:72
+#: .\Reports\templates\page\report_view.html:63
+msgid "Complainant Name"
+msgstr "اسم الشاكي"
+
+#: .\Reports\forms.py:25 .\Reports\templates\page\report_create.html:39
+#: .\Reports\templates\page\report_print.html:76
+#: .\Reports\templates\page\report_view.html:67
+msgid "Complainant Address"
+msgstr "عنوان الشاكي"
+
+#: .\Reports\forms.py:26 .\Reports\templates\page\report_create.html:44
+#: .\Reports\templates\page\report_print.html:80
+#: .\Reports\templates\page\report_view.html:71
+msgid "Complainant Nationality"
+msgstr "جنسية الشاكي"
+
+#: .\Reports\forms.py:27 .\Reports\templates\page\report_create.html:49
+#: .\Reports\templates\page\report_print.html:84
+#: .\Reports\templates\page\report_view.html:75
+msgid "Complainant National Number"
+msgstr "الرقم الوطني للشاكي"
+
+#: .\Reports\forms.py:28 .\Reports\templates\page\report_create.html:54
+#: .\Reports\templates\page\report_print.html:88
+#: .\Reports\templates\page\report_view.html:79
+msgid "Complainant Passport Type"
+msgstr "نوع جواز الشاكي"
+
+#: .\Reports\forms.py:29 .\Reports\templates\page\report_create.html:59
+#: .\Reports\templates\page\report_print.html:92
+#: .\Reports\templates\page\report_view.html:83
+msgid "Complainant Passport Number"
+msgstr "رقم جواز الشاكي"
+
+#: .\Reports\forms.py:30 .\Reports\forms.py:51
+#: .\Reports\templates\page\report_create.html:64
+#: .\Reports\templates\page\report_print.html:96
+#: .\Reports\templates\page\report_view.html:87
+msgid "Complainant Email"
+msgstr "البريد الالكتروني للشاكي"
+
+#: .\Reports\forms.py:31 .\Reports\templates\page\report_create.html:69
+#: .\Reports\templates\page\report_print.html:100
+#: .\Reports\templates\page\report_view.html:91
+msgid "Complainant Phone"
+msgstr "هاتف او واتساب الشاكي"
+
+#: .\Reports\forms.py:32 .\Reports\templates\page\report_create.html:74
+#: .\Reports\templates\page\report_list.html:32
+#: .\Reports\templates\page\report_print.html:108
+#: .\Reports\templates\page\report_view.html:99
+msgid "Accused Name"
+msgstr "اسم المتهم"
+
+#: .\Reports\forms.py:33 .\Reports\templates\page\report_create.html:79
+#: .\Reports\templates\page\report_print.html:117
+#: .\Reports\templates\page\report_view.html:108
+msgid "Report Number"
+msgstr "رقم البلاغ"
+
+#: .\Reports\forms.py:34 .\Reports\templates\page\report_create.html:84
+#: .\Reports\templates\page\report_list.html:33
+#: .\Reports\templates\page\report_print.html:121
+#: .\Reports\templates\page\report_view.html:112
+msgid "State"
+msgstr "الولاية"
+
+#: .\Reports\forms.py:35 .\Reports\templates\page\report_create.html:89
+#: .\Reports\templates\page\report_list.html:34
+#: .\Reports\templates\page\report_print.html:125
+#: .\Reports\templates\page\report_view.html:116
+msgid "Prosecution"
+msgstr "النيابة"
+
+#: .\Reports\forms.py:36 .\Reports\templates\page\report_create.html:94
+#: .\Reports\templates\page\report_print.html:129
+#: .\Reports\templates\page\report_view.html:120
+msgid "Police"
+msgstr "قسم الشرطة"
+
+#: .\Reports\forms.py:37 .\Reports\forms.py:56
+#: .\Reports\templates\page\report_create.html:99
+msgid "Date Report"
+msgstr "تاريخ البلاغ"
+
+#: .\Reports\forms.py:38 .\Reports\templates\page\report_create.html:104
+msgid "Materials of Accusation"
+msgstr "مواد الاتهام"
+
+#: .\Reports\forms.py:39 .\Reports\templates\page\report_create.html:109
+#: .\Reports\templates\page\report_print.html:140
+#: .\Reports\templates\page\report_view.html:131
+msgid "Summary Report"
+msgstr "ملخص البلاغ"
+
+#: .\Reports\forms.py:40 .\Reports\templates\page\report_create.html:114
+#: .\Reports\templates\page\report_print.html:143
+#: .\Reports\templates\page\report_view.html:134
+msgid "Note"
+msgstr "ملاحظة"
+
+#: .\Reports\forms.py:45 .\Reports\templates\page\contact_us_create.html:28
+msgid "Your Full Name"
+msgstr "الاسم بالكامل"
+
+#: .\Reports\forms.py:46
+msgid "Specify Your Address"
+msgstr "حدد عنوانك "
+
+#: .\Reports\forms.py:47
+msgid "What Is Your Nationality"
+msgstr "ماهي جنسيتك"
+
+#: .\Reports\forms.py:48
+msgid "If You are Sudanese, The National Number is Required"
+msgstr "اذا كنت سودانياَ, الرقم الوطني مطلوب"
+
+#: .\Reports\forms.py:49
+msgid "If You are Not Sudanese, The Passport Type is Required"
+msgstr "اذا كنت لست سودانياَ, نوع الجواز مطلوب"
+
+#: .\Reports\forms.py:50
+msgid "If You are Not Sudanese, The Passport Number is Required"
+msgstr "اذا كنت لست سودانياَ, رقم الجواز مطلوب"
+
+#: .\Reports\forms.py:52
+msgid "Your Phone or WhatsApp"
+msgstr "رقم هاتفك او الواتساب"
+
+#: .\Reports\forms.py:53
+msgid "Accused Full Name"
+msgstr "اسم المتهم بالكامل"
+
+#: .\Reports\forms.py:54
+msgid "Write the report number if you remember it, this helps us"
+msgstr "اكتب رقم البلاغ اذا كنت تتذكره, هذا يساعدنا"
+
+#: .\Reports\forms.py:55
+msgid "Write the police station where the report was filed"
+msgstr "اكتب قسم الشرطة الذي تم فيه تدوين البلاغ"
+
+#: .\Reports\forms.py:57
+msgid "Materials of accusation specified by the prosecutor? if you remember it"
+msgstr "مواد الاتهام التي حددها وكيل النيابة, اذا كنت تتذكرها"
+
+#: .\Reports\forms.py:58
+msgid ""
+"In less than 300 characters, write a summary of the report, if you remember "
+"it"
+msgstr "في اقل من 300 حرف , اكتب ملخص البلاغ, اذا كنت تتذكره"
+
+#: .\Reports\forms.py:59
+msgid "In less than 300 characters, write any notes you want to add"
+msgstr "في اقل من 300 حرف, اكتب اي ملحوظة تريد اضافتها"
+
+#: .\Reports\forms.py:93 .\Reports\templates\page\contact_us_view.html:63
+msgid "Name"
+msgstr "الاسم"
+
+#: .\Reports\forms.py:94 .\Reports\templates\page\contact_us_list.html:21
+#: .\Reports\templates\page\contact_us_view.html:71
+msgid "Phone"
+msgstr "الهاتف"
+
+#: .\Reports\forms.py:95 .\Reports\templates\page\contact_us_list.html:22
+#: .\Reports\templates\page\contact_us_view.html:67
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#: .\Reports\forms.py:96 .\Reports\templates\page\contact_us_create.html:43
+#: .\Reports\templates\page\contact_us_view.html:79
+msgid "Comment"
+msgstr "التعليق"
+
+#: .\Reports\forms.py:100
+msgid "Full Name"
+msgstr "الاسم بالكامل"
+
+#: .\Reports\forms.py:101 .\Reports\templates\page\contact_us_create.html:33
+msgid "Your phone or WhatsApp"
+msgstr "رقم هاتفك او الواتساب"
+
+#: .\Reports\forms.py:102 .\Reports\templates\page\contact_us_create.html:38
+msgid "Your Email"
+msgstr "بريدك الالكتروني"
+
+#: .\Reports\forms.py:103
+msgid "In less than 300 characters, write Comment"
+msgstr "في اقل من 300 حرف, اكتب تعليقك"
+
+#: .\Reports\models.py:27
+msgid "Select Country"
+msgstr "اختر الدولة"
+
+#: .\Reports\templates\page\contact_us_create.html:10
+#: .\Reports\templates\page\contact_us_create.html:16
+msgid "Contact Us"
+msgstr "تواصل معنا"
+
+#: .\Reports\templates\page\contact_us_create.html:14
+msgid "If you Have a Suggestion Or Complaint"
+msgstr "اذا كان لديك اقراح او شكوى"
+
+#: .\Reports\templates\page\contact_us_create.html:49
+msgid "Send"
+msgstr "ارسال"
+
+#: .\Reports\templates\page\contact_us_create.html:60
+msgid "If you Find Any Problem On The Site, Please Contact Us Here"
+msgstr "اذا واجهتك اي مشكلة على الموقع , رجاءا تواصل معنا هنا"
+
+#: .\Reports\templates\page\contact_us_create.html:63
+#: .\Reports\templates\page\contact_us_view.html:56
+msgid "Contact Information"
+msgstr "بيانات التواصل"
+
+#: .\Reports\templates\page\contact_us_create.html:83
+msgid "Ahmed Osman Elmadani"
+msgstr "أحمد عثمان المدني"
+
+#: .\Reports\templates\page\contact_us_create.html:84
+msgid "Full Stack  Developer"
+msgstr "مطوير للواجهة الأمامية والخلفية للتطبيقات"
+
+#: .\Reports\templates\page\contact_us_create.html:85
+msgid ""
+"Ahmed Osman Elmadani, Full Stack  Developer specialist in web development "
+"using Python, Django, Odoo, and data analysis, professional life in the "
+"Public Prosecution of the Republic of Sudan,. Now I build ERP Systems and "
+"website  capable of solving complex problems with simple and effective "
+"solutions."
+msgstr ""
+"أحمد عثمان المدني، مطور Full Stack متخصص في تطوير الويب باستخدام بايثون، "
+"جانغو، أودو، وتحليل البيانات، الحياة المهنية في النيابة العامة بجمهورية "
+"السودان،. الآن أقوم ببناء أنظمة تخطيط موارد المؤسسات (ERP) ومواقع قادر على "
+"حل المشاكل المعقدة بطريقة بسيطة وفعالة ."
+
+#: .\Reports\templates\page\contact_us_list.html:14
+msgid "Suggestion And Complaint"
+msgstr "المقترحات و الشكاوى"
+
+#: .\Reports\templates\page\contact_us_list.html:19
+msgid "Follow Number"
+msgstr "رقم المتابعة"
+
+#: .\Reports\templates\page\contact_us_list.html:20
+msgid " Name"
+msgstr "الاسم"
+
+#: .\Reports\templates\page\contact_us_list.html:23
+#: .\Reports\templates\page\contact_us_view.html:75
+msgid "Date"
+msgstr "التاريخ"
+
+#: .\Reports\templates\page\contact_us_list.html:35
+#: .\Reports\templates\page\report_list.html:36
+msgid "View"
+msgstr "عرض"
+
+#: .\Reports\templates\page\contact_us_view.html:59
+#: .\Reports\templates\page\report_list.html:30
+#: .\Reports\templates\page\report_print.html:68
+#: .\Reports\templates\page\report_view.html:59
+msgid "Follow-up Number"
+msgstr "رقم المتابعة"
+
+#: .\Reports\templates\page\report_create.html:7
+msgid "Create Report"
+msgstr "انشاء بلاغ"
+
+#: .\Reports\templates\page\report_create.html:11
+msgid "Warning"
+msgstr "تحذير"
+
+#: .\Reports\templates\page\report_create.html:13
+msgid ""
+"The Data Entered is the Responsibility of the User in the Event that he "
+"Enters any False Information that Exposes Himself to a Legal Issue"
+msgstr ""
+"كل البيانات المدخلة على مسؤولية المستخدم في حالة ادخلت اي بيانات خاطئة تعرض "
+"نفسك للمسائلة القانونية"
+
+#: .\Reports\templates\page\report_create.html:121
+msgid "Save"
+msgstr "حفظ"
+
+#: .\Reports\templates\page\report_list.html:13
+msgid "Reports"
+msgstr "البلاغات"
+
+#: .\Reports\templates\page\report_list.html:17
+msgid "Reports = "
+msgstr "البلاغات = "
+
+#: .\Reports\templates\page\report_list.html:22
+msgid "Search report"
+msgstr "بحث عن بلاغ"
+
+#: .\Reports\templates\page\report_list.html:35
+#: .\Reports\templates\page\report_print.html:133
+#: .\Reports\templates\page\report_view.html:124
+msgid "Report Date"
+msgstr "تاريخ البلاغ"
+
+#: .\Reports\templates\page\report_list.html:49
+msgid "View Report"
+msgstr "عرض البلاغ"
+
+#: .\Reports\templates\page\report_list.html:64
+#: .\Reports\templates\page\report_list.html:69
+msgid "previous"
+msgstr "السابق"
+
+#: .\Reports\templates\page\report_list.html:75
+#: .\Reports\templates\page\report_list.html:80
+msgid "Next"
+msgstr "التالي"
+
+#: .\Reports\templates\page\report_print.html:6
+#: .\Reports\templates\page\report_print.html:58
+msgid "Public Prosecution"
+msgstr "النيابة العامة"
+
+#: .\Reports\templates\page\report_print.html:57
+msgid "Republic of Sudan"
+msgstr "جمهورية السودان"
+
+#: .\Reports\templates\page\report_print.html:65
+#: .\Reports\templates\page\report_view.html:56
+msgid "Complainant Information"
+msgstr "بيانات الشاكي"
+
+#: .\Reports\templates\page\report_print.html:105
+#: .\Reports\templates\page\report_view.html:96
+msgid "Accused Information"
+msgstr "بيانات المتهم"
+
+#: .\Reports\templates\page\report_print.html:113
+#: .\Reports\templates\page\report_view.html:104
+msgid "Report Details"
+msgstr "تفاصيل البلاغ"
+
+#: .\Reports\templates\page\report_print.html:148
+#: .\Reports\templates\page\report_view.html:139
+msgid "Print"
+msgstr "طباعة"
+
+#: .\Reports\templates\page\success.html:35
+msgid "Your order has been saved correctly and the follow-up Number is "
+msgstr "تم حفظ طلبك بنجاح ورقم المتابعة هو "
+
+#: .\Reports\templates\page\success.html:37
+msgid ""
+"Please save the number and do not let anyone know it except you, and tell us "
+"about it when you contact us through the available methods "
+msgstr ""
+"رجاءا احفظ الرقم ولا تشاركه مع اي احد غيرك , واخبرنا بهذا الرقم عندما تتواصل "
+"معنا عبر الطرق المتاحة "
+
+#~ msgid "|Write state report"
+#~ msgstr "اكتب ولاية التي تم فيها فتح البلاغ"

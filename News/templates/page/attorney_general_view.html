@@ -1,0 +1,47 @@
+{% extends 'control/base.html' %}
+{% load i18n %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <h1>
+                    <h1 style="color: green;">
+                   {% get_current_language as LANGUAGE_CODE %}
+                  {% if LANGUAGE_CODE == 'ar' %}
+                      {{ attorney_general.name_arb }}
+                  {% else %}
+                      {{ attorney_general.name_eng }}
+                  {% endif %}
+                </h1>
+                </h1>
+                 <h2>
+                     <time datetime="{{ attorney_general.start_date }}">
+              {{ attorney_general.start_date|date:"Y-m-d" }}
+              </time>
+                </h2>
+                <img src="{{ attorney_general.main_image.url }}" width="400" height="300" alt="{{ image.alt }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                    <br class="clear" />
+                <h2>
+                    {% get_current_language as LANGUAGE_CODE %}
+                  {% if LANGUAGE_CODE == 'ar' %}
+                      {{ attorney_general.article_arb }}
+                  {% else %}
+                      {{ attorney_general.article_eng }}
+                  {% endif %}
+                </h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

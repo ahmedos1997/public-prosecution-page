@@ -1,0 +1,92 @@
+{% load i18n %}
+{% load static %}
+
+<body id="top">
+<div class="wrapper col1">
+  <div id="header">
+    <div class="fl_left">
+      <h1><a href="{% url 'main' %}">{% trans 'Public Prosecution' %}</a></h1>
+      <p>{% trans 'Republic of Sudan' %}</p>
+            <br class="clear" />
+      {% if user.is_authenticated %}
+        {% csrf_token %}
+      <li>{{ user.username }}</li>
+       <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button style="background-color: black; border: none; color: white; padding: 0px 1px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 12px; box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.15); transition: all 0.3s ease 0s;">
+    {% trans 'Logout' %}
+    </button>
+        </form>
+      {% endif %}
+         <!-- language_selector.html -->
+    <form action="{% url 'set_language' %}" method="post">
+  {% csrf_token %}
+  <select name="language" onchange="this.form.submit()" style="background-color: #BFE009; color: black; font-size: 13px;">
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+    {% get_language_info_list for LANGUAGES as languages %}
+    {% for language in languages %}
+      <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+          {{ language.name_local }} ({{ language.code }})
+      </option>
+    {% endfor %}
+  </select>
+</form>
+
+
+
+    </div>
+    <a class="navbar-brand animated slower jackInTheBox" href="{% url 'main' %}" id="logo">
+                        <img class="d-inline-block align-top" src="{% static 'images/prosecution.png' %}">
+    </a>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="topbar">
+    <div id="topnav">
+      <ul>
+        <li class="active"><a href="{% url 'main' %}">{% trans 'Home' %}</a></li>
+        <li><a href="{% url 'news' %}">{% trans 'All News' %}</a></li>
+        <li><a href="{% url 'report_create' %}">{% trans 'Create Report' %}</a></li>
+        <li><a href="{% url 'contact_us_create' %}">{% trans 'Contact Us' %}</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'report_list' %}">{% trans 'List of reports' %}</a></li>
+        <li><a href="{% url 'contact_us_list' %}">{% trans 'List of Complaints' %}</a></li>
+
+        {% endif %}
+
+
+        </ul>
+      </div>
+    </div>
+      <br class="clear" />
+
+</div>
+</body>
+
+
+<style>
+    li.active a,
+li a {
+  font-size: 15px; /* حجم الخط الجديد */
+  font-weight: bold; /* تحديد وزن الخط حسب الرغبة */
+}
+input[type="submit"] {
+  font-size: 18px; /* حجم الخط الجديد */
+  color: gold;
+}
+
+
+select[name="language"] {
+  font-size: 14px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  font-size: 14px;
+  color: black;
+  padding: 5px 10px;
+}
+</style>

@@ -1,0 +1,73 @@
+{% extends 'control/base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+<body>
+  <br class="clear" />
+  <div class="wrapper col4">
+  <div id="container">
+    <div class="gallery">
+      <h2>{% trans 'ALL News' %}</h2>
+
+      <ul class="news-list">
+        {% for news in news %}
+          <li class="news-item">
+            <a href="{% url  'news_view' news.id %}">
+              <img src="{{ news.main_image.url }}" alt="" width="174" height="174" />
+
+              <h3 class="news-title">
+              {% get_current_language as LANGUAGE_CODE %}
+                  {% if LANGUAGE_CODE == 'ar' %}
+                      {{ news.title_arb }}
+                  {% else %}
+                      {{ news.title_eng }}
+                  {% endif %}
+              </h3>
+
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <br class="clear" />
+    </div>
+  </div>
+</div>
+
+      <!--########################################################################################################-->
+
+
+      <div class="d-flex justify-content-center bd-highlight mb-3">
+        {% if page_obj.paginator.count > 0 %}
+        <nav>
+          <ul class="pagination">
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                {% trans 'previous' %}
+              </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="#">{% trans 'previous' %}</a>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                {% trans 'Next' %}
+              </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="#">{% trans 'Next' %}</a>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</body>
+
+{% endblock %}
