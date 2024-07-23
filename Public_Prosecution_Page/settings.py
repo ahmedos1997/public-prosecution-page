@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-9+&nq@srw+y+y18she#y#5m(u&n-_9rnua1cubz=mr0_f_xlqw
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'onrender.com',
+    'https://public-prosecution-page.onrender.com/',
     '127.0.0.1'
 ]
 
@@ -191,7 +191,8 @@ MEDIA_URL = "/media/"
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 
 
