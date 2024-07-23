@@ -28,10 +28,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-9+&nq@srw+y+y18she#y#5m(u&n-_9rnua1cubz=mr0_f_xlqw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'public-prosecution-page.onrender.com',
+    'public-prosecution.onrender.com',
     '127.0.0.1'
 ]
 
@@ -99,10 +99,10 @@ WSGI_APPLICATION = 'Public_Prosecution_Page.wsgi.application'
 #     'default': {
 #
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'public_prosecution_page',
-#         'HOST': 'dpg-cnl0ejvjbltc73f8iujg-a',
-#         'USER': 'public_prosecution_page_user',
-#         'PASSWORD': 'x9RI8WtIVCDTxZe5xpY4cQ6GFfmnFuoM',
+#         'NAME': 'publicprosecutionpage_f2hw',
+#         'HOST': 'dpg-cqfeo656l47c73bd6mpg-a',
+#         'USER': 'ahmed',
+#         'PASSWORD': '7cj0J2uzv7fj4zhGBhj00wFGlGBP2DO2',
 #         'PORT': '5432'
 #     }
 #
@@ -114,11 +114,11 @@ DATABASES = {
     'default': {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'publicprosecutionpage_f2hw',
-        'HOST': 'dpg-cqfeo656l47c73bd6mpg-a',
-        'USER': 'ahmed',
-        'PASSWORD': '7cj0J2uzv7fj4zhGBhj00wFGlGBP2DO2',
-        'PORT': '5432'
+        'NAME': 'public_prosecution_page',
+        'HOST': 'localhost',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'PORT': ''
     }
 
    }
@@ -191,8 +191,7 @@ MEDIA_URL = "/media/"
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 
