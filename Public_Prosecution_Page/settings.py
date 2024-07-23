@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-9+&nq@srw+y+y18she#y#5m(u&n-_9rnua1cubz=mr0_f_xlqw
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://public-prosecution-page.onrender.com/',
+    'www.public-prosecution-page.onrender.com',
     '127.0.0.1'
 ]
 
