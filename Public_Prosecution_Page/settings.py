@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-9+&nq@srw+y+y18she#y#5m(u&n-_9rnua1cubz=mr0_f_xlqw
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'onrender.com',
+    'public-prosecution.onrender.com',
     '127.0.0.1'
 ]
 
@@ -91,22 +91,22 @@ WSGI_APPLICATION = 'Public_Prosecution_Page.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
-# DATABASES['default'] = dj_database_url.parse('postgres://public_prosecution_page_user:x9RI8WtIVCDTxZe5xpY4cQ6GFfmnFuoM@dpg-cnl0ejvjbltc73f8iujg-a.oregon-postgres.render.com/public_prosecution_page')
+DATABASES['default'] = dj_database_url.parse('postgresql://ahmed:7cj0J2uzv7fj4zhGBhj00wFGlGBP2DO2@dpg-cqfeo656l47c73bd6mpg-a.oregon-postgres.render.com/publicprosecutionpage_f2hw')
 
 #
-
-DATABASES = {
-    'default': {
-
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'publicprosecutionpage_f2hw',
-        'HOST': 'dpg-cqfeo656l47c73bd6mpg-a',
-        'USER': 'ahmed',
-        'PASSWORD': '7cj0J2uzv7fj4zhGBhj00wFGlGBP2DO2',
-        'PORT': '5432'
-    }
-
-   }
+#
+# DATABASES = {
+#     'default': {
+#
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'publicprosecutionpage_f2hw',
+#         'HOST': 'dpg-cqfeo656l47c73bd6mpg-a',
+#         'USER': 'ahmed',
+#         'PASSWORD': '7cj0J2uzv7fj4zhGBhj00wFGlGBP2DO2',
+#         'PORT': '5432'
+#     }
+#
+#    }
 
 #
 #
