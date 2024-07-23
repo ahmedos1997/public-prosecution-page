@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-9+&nq@srw+y+y18she#y#5m(u&n-_9rnua1cubz=mr0_f_xlqw
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'public-prosecution.onrender.com',
+    '.onrender.com',
     '127.0.0.1'
 ]
 
@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'Public_Prosecution_Page.wsgi.application'
 
 # DATABASES['default'] = dj_database_url.parse('postgres://public_prosecution_page_user:x9RI8WtIVCDTxZe5xpY4cQ6GFfmnFuoM@dpg-cnl0ejvjbltc73f8iujg-a.oregon-postgres.render.com/public_prosecution_page')
 
-
+#
 
 DATABASES = {
     'default': {
@@ -122,7 +122,7 @@ DATABASES = {
 #     }
 #
 #    }
-#
+# #
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
