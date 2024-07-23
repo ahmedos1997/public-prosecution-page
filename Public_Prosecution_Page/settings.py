@@ -28,10 +28,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-9+&nq@srw+y+y18she#y#5m(u&n-_9rnua1cubz=mr0_f_xlqw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://public-prosecution-page.onrender.com/',
+    'onrender.com',
     '127.0.0.1'
 ]
 
