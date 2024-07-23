@@ -5,6 +5,30 @@
 
 <div class="wrapper col4" xmlns="http://www.w3.org/1999/html">
           <br class="clear" />
+
+  {% for last_news in last_news %}
+  <div id="container">
+    <div id="content">
+       <a href="{% url  'news_view' last_news.id %}">
+      <div id="featured_post">
+        <img src="{{ MEDIA_URL }}{{ last_news.main_image.url }}" alt="" />
+
+
+        <br class="clear" />
+        <h2>
+            {% get_current_language as LANGUAGE_CODE %}
+            {% if LANGUAGE_CODE == 'ar' %}
+                {{ last_news.title_arb }}
+            {% else %}
+                {{ last_news.title_eng }}
+            {% endif %}
+        </h2>
+        <time datetime="{{ news.date }}">
+          {{ last_news.date|date:"Y-m-d" }}
+        </time>
+        {% endfor %}
+      </div>
+       </a>
 <!--###############################################################################################################-->
 
       <h1 style="color: green;">{% trans 'CV of the Attorney General in the Republic of Sudan' %} </h1>
