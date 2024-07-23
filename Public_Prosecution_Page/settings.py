@@ -91,24 +91,24 @@ WSGI_APPLICATION = 'Public_Prosecution_Page.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
-DATABASES['default'] = dj_database_url.parse('postgresql://ahmed:7cj0J2uzv7fj4zhGBhj00wFGlGBP2DO2@dpg-cqfeo656l47c73bd6mpg-a.oregon-postgres.render.com/publicprosecutionpage_f2hw')
+# DATABASES['default'] = dj_database_url.parse('postgres://public_prosecution_page_user:x9RI8WtIVCDTxZe5xpY4cQ6GFfmnFuoM@dpg-cnl0ejvjbltc73f8iujg-a.oregon-postgres.render.com/public_prosecution_page')
 
 #
-#
-# DATABASES = {
-#     'default': {
-#
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'publicprosecutionpage_f2hw',
-#         'HOST': 'dpg-cqfeo656l47c73bd6mpg-a',
-#         'USER': 'ahmed',
-#         'PASSWORD': '7cj0J2uzv7fj4zhGBhj00wFGlGBP2DO2',
-#         'PORT': '5432'
-#     }
-#
-#    }
 
-#
+DATABASES = {
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'publicprosecutionpage_f2hw',
+        'HOST': 'dpg-cqfeo656l47c73bd6mpg-a',
+        'USER': 'ahmed',
+        'PASSWORD': '7cj0J2uzv7fj4zhGBhj00wFGlGBP2DO2',
+        'PORT': '5432'
+    }
+
+   }
+
+
 #
 # DATABASES = {
 #     'default': {
@@ -122,7 +122,7 @@ DATABASES['default'] = dj_database_url.parse('postgresql://ahmed:7cj0J2uzv7fj4zh
 #     }
 #
 #    }
-# #
+#
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

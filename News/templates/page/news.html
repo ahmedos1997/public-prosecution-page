@@ -15,7 +15,7 @@
         {% for news in news %}
           <li class="news-item">
             <a href="{% url  'news_view' news.id %}">
-              <img src="{{ news.main_image.url }}" alt="" width="174" height="174" />
+              <img src="{{ news.url }}" alt="" width="174" height="174" />
 
               <h3 class="news-title">
               {% get_current_language as LANGUAGE_CODE %}
